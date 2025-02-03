@@ -8,10 +8,23 @@ from datetime import datetime
 TOKEN = os.getenv("DISCORD_TOKEN")
 if TOKEN is None:
     raise ValueError("Токен бота не знайдено у змінних середовища!")
-RECORDINGS_DIR = "recordings"
 
-# Переконайся, що папка для записів існує
-os.makedirs(RECORDINGS_DIR, exist_ok=True)
+# Створення тимчасової папки для зберігання записів
+temp_dir = '/tmp/recordings'
+os.makedirs(temp_dir, exist_ok=True)
+
+# Шлях до файлу
+audio_file_path = os.path.join(temp_dir, 'audio_recording.wav')
+
+# Запис аудіо в файл
+def save_audio_file(audio_data):
+    with open(audio_file_path, 'wb') as f:
+        f.write(audio_data)
+    print(f"Audio saved to {audio_file_path}")
+
+# Приклад виклику функції з даними аудіо
+audio_data = b"dummy_audio_data"  # Це має бути твій реальний аудіо потік
+save_audio_file(audio_data)
 
 intents = discord.Intents.default()
 intents.voice_states = True  # Важливо для відстеження голосових каналів
