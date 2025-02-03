@@ -1,3 +1,4 @@
 discord.py
 pyaudio
 aiohttp
+audioop-lts
