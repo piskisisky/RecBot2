@@ -102,4 +102,4 @@ async def stop(ctx):
     await bot.close()
 
 
-bot.run(TOKEN)
+bot.run(YOUR_BOT_TOKEN)
