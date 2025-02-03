@@ -5,7 +5,9 @@ import os
 import subprocess
 from datetime import datetime
 
-TOKEN = "YOUR_BOT_TOKEN"  # Встав свій токен
+TOKEN = os.getenv("DISCORD_TOKEN")
+if TOKEN is None:
+    raise ValueError("Токен бота не знайдено у змінних середовища!")
 RECORDINGS_DIR = "recordings"
 
 # Переконайся, що папка для записів існує
@@ -102,4 +104,4 @@ async def stop(ctx):
     await bot.close()
 
 
-bot.run(YOUR_BOT_TOKEN)
+bot.run(TOKEN)
