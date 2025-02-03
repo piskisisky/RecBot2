@@ -104,4 +104,4 @@ def stop_recording():
 
     frames = []  # Очищаємо зібрані фрейми
 
-bot.run('MTMzNTc3Njk2NjgwODE3ODcyOQ.G7ceaU.1JTwxXBaT626CN6lByuSsIrW8bl9cKWuIpGRUY')
+bot.run('YOUR_DISCORD_BOT_TOKEN')
