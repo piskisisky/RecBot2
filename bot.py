@@ -6,7 +6,6 @@ import subprocess
 from datetime import datetime
 
 TOKEN = "YOUR_BOT_TOKEN"  # Встав свій токен
-GUILD_ID = YOUR_GUILD_ID  # Встав ID сервера
 RECORDINGS_DIR = "recordings"
 
 # Переконайся, що папка для записів існує
